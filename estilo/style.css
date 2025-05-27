@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face{
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root{  /* literalmente a variavel do CSS */
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #3fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: "Bebas Neue", sans-serif;
+    --fonte-android: "Android", sans-serif;
+}
+
+* { /* o asteerisco representa todos os elementos, facilitando uma modifação global */
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+
+header{
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    text-align: center;
+    min-height: 150px;
+    padding-top: 40px;
+}
+header > h1{
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 5px 2px rgba(0, 0, 0, 0.171);
+}
+header > p{
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    width: 500px;
+    max-width: 500px;
+    margin: auto;
+    padding: 0px 10px;
+    color: white;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.171);
+}
+
+
+nav{
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 9px 8px rgba(0, 0, 0, 0.247);
+    text-align: center;
+    padding-top: 20px;
+}
+nav a{
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition-duration: .3s; /*duração da ativação do box qdo passar o mouse, animacao boa p usar */
+}
+nav a:hover{
+    color: var(--cor5);
+    background-color: var(--cor3);
+}
+
+
+main{
+    background-color: white;
+    min-width: 320px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+    border-bottom-left-radius: 10px; /* so arredondar bordas de baixo */
+    border-bottom-right-radius: 10px /* so arredondar bordas de baixo */
+}
+main h1{
+    font-size: 1.8em;
+    font-weight: normal;
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+}
+main h2{
+    font-family: var(--fonte-android);
+    font-size: 1.3em;
+    font-weight: normal;
+    color: var(--cor4);
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+main p{
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 25px;
+    line-height: 30px;
+}
+main strong{
+    color: var(--cor4);
+}
+main a{
+    color: var(--cor5);
+    text-decoration: none;
+    font-weight: bold;
+}
+main a:hover{
+    transition-duration: .5s;
+    background-color: var(--cor1);
+}
+main a:active{
+    background-color: var(--cor0);
+    transition-duration: 0.15s;
+}
+main img{
+    width: 100%;
+}
+main img.pq{
+    max-width: 350px;
+    display: block;    /* usar display pq imagem, por padrão não é um bloco */
+    margin: auto;
+}
+
+div.video{
+    background-color: var(--cor1);
+    padding: 15px;
+    margin: 0px -20px 30px -20px;
+    padding-bottom: 57.3%;
+    position: relative;
+}
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    height: 90%;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.377);
+}
+div.video > iframe:hover{
+    transform: scale(0.97);
+    transition-duration: 0.3s;
+}
+
+
+aside{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.363);
+}
+aside ul{
+    list-style-type: '\2714\00A0'; /*substituir a bola das listas por um check; o 00A0 e um espacamento*/
+    list-style-position: inside;  /*arrumar a posicao da bolinha das listas */
+    columns: 2; /*dividir a lista em 2 colunas */
+}
+aside h3{
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    color: white;
+    background-image: linear-gradient(to right, var(--cor4), transparent);
+    margin: -10px -10px 0px -10px;
+    padding: 10px;
+    border-radius: 10px 0px;
+}
+
+footer{
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+footer a{
+    color: var(--cor2);
+    text-decoration: none;
+}
+footer a:active{
+    background-color: var(--cor5);
+    color: var(--cor1);
+    transition-duration: 0.15s;
+}
